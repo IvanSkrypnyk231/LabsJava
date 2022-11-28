@@ -1,0 +1,53 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+
+
+class Client {
+    private String name;
+    private float money;
+    private List<Goods> goodsList;
+
+    public Client(String name, float money);
+
+
+    @Override
+    public String toString();
+}
+
+enum campaignType {
+    Hiking,
+    mountainHike,
+    Bicycle
+
+}
+
+
+
+class Goods {
+    private float price;
+    private String name;
+    private float weight;
+    private String producer;
+    private Set<campaignType> types;
+
+    public Goods(float price, String name, float weight, String producer, Set<campaignType> types);
+    @Override
+    public String toString();
+}
+
+
+class Shop {
+    private String name;
+    private float money;
+    private List<Goods> goodsList;
+
+    public Shop(String name, float money);
+
+    public Shop(String name, float money, List<Goods> goodsList);
+
+    @Override
+    public String toString() ;
+}
+
+@enduml
